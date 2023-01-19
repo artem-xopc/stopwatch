@@ -1,55 +1,104 @@
-$bgColor: rgb(32, 36, 43);
+// Переменные фоновых цветов
+$bgColor: #20242b;
 $bgColor1: rgb(47, 51, 58);
 $bgColor2: rgb(21, 43, 80);
+$bgColor3: #000;
 $borderColor: rgb(57, 59, 62);
+
+// Переменные состояний текста
 $textColor: #abb2bf;
 $activeTextColor: #ff9501;
 $tech: #f8ab06;
 $err: #fb0404;
 
+// Переменные отступов
+$padding: padding 10px;
+$margin: margin 10px;
+$marginTop: margin-top 50px;
+
 body {
   font-family: "Courier New", Courier, monospace;
+  max-width: 1920px;
   color: $textColor;
   background-color: $bgColor;
-  margin: 0;
+  margin: auto;
   padding: auto;
   box-sizing: border-box;
+  display: flex;
+}
+
+.round__wrapper {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  padding: 10px;
+  &__input {
+    display: block;
+    padding: $padding;
+  }
 }
 
 .stopwatch-wrapper {
-  max-width: 1024px;
-  height: 100%;
   margin: auto;
-  margin-top: 150px;
   user-select: none;
 }
 
+// .stopwatch {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   &__block {
+//     margin-top: 100px;
+//     width: 100px;
+//     height: 100px;
+//     .time {
+//       background-color: $bgColor;
+//       border: 1px solid $borderColor;
+//       border-bottom: none;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       height: 100px;
+//       font-size: 20px;
+//     }
+//     .label {
+//         font-size: 16px;
+//     }
+//   }
+// }
+
 .stopwatch {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 100px;
   &__block {
-    width: 150px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    width: 120px;
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+    @media (max-width: 500px) {
+        display: block;
+    }
     .time {
-      background-color: $bgColor;
+      background-color: $bgColor3;
       border: 1px solid $borderColor;
-      border-bottom: none;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 150px;
-      font-size: 50px;
+      height: 100px;
+      font-size: 20px;
     }
     .label {
-      background-color: $bgColor2;
+      background-color: $bgColor3;
       border: 1px solid $borderColor;
-      border-top: none;
+      border-bottom: none;
+      color: $tech;
       padding: 5px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
       text-align: center;
+      font-size: 12px;
     }
   }
 }
@@ -57,21 +106,19 @@ body {
 .buttons {
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  min-width: 800px;
-  margin: 0 auto;
-  margin-top: 150px;
+  margin: 20px auto;
+  border: none;
   .btn {
     font-family: "Courier New", Courier, monospace;
     color: $textColor;
     background: $bgColor1;
+    user-select: none;
     border: none;
     border-radius: 10px;
     font-size: 18px;
     padding: 10px;
-    width: 180px;
+    margin: 10px;
+    width: 120px;
     transition: 0.3s ease-in-out;
     &.start {
       &:hover {
@@ -80,12 +127,14 @@ body {
       }
     }
     &.stop {
+        color: $err;
       &:hover {
         background-color: $err;
         color: white;
       }
     }
     &.pause {
+        color: $tech;
       &:hover {
         background-color: $tech;
         color: white;
@@ -94,7 +143,7 @@ body {
     &.new {
       &:disabled {
         background: none;
-        cursor: not-allowed; 
+        cursor: not-allowed;
         color: $err;
       }
       &:enabled {
@@ -107,15 +156,13 @@ body {
   }
 }
 
-.round__wrapper {
-  position: absolute;
-  left: 15px;
-  bottom: 0;
-  width: 250px;
-  border: 1px solid $tech;
-  border-bottom: none;
-  color: $textColor;
-  font-size: 18px;
-  padding: 15px;
-  text-align: center;
-}
+// .round__wrapper {
+//   position: relative;
+//   left: 0;
+//   right: 0;
+//   width: 210px;
+//   border-bottom: none;
+//   color: $textColor;
+//   font-size: 16px;
+//   padding: 15px;
+// }

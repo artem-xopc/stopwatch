@@ -4,7 +4,7 @@ const secElement = document.querySelector(".sec");
 const minElement = document.querySelector(".min");
 const hourElement = document.querySelector(".hour");
 
-const roundElement = document.querySelector(".round__input") 
+const roundElement = document.querySelector(".round__input");
 
 // Задаём кнопки
 const startButton = document.querySelector(".start");
@@ -41,7 +41,6 @@ roundButton.addEventListener("click", () => {
   funcRoundButton();
 });
 
-
 // функционал кнопок
 const funcstopButton = () => {
   milsec = 0;
@@ -52,24 +51,24 @@ const funcstopButton = () => {
   secElement.textContent = "00";
   minElement.textContent = "00";
   hourElement.textContent = "00";
-  disableBtn()
+  disableBtn();
 };
 
 const funcRoundButton = () => {
-    count++
-    const resultRound = document.createElement("div")
-    resultRound.innerText = `Round ${count}: ${hour > 9 ? hour : "0" + hour}:${min > 9 ? min : "0" + min}:${sec > 9 ? sec : "0" + sec}:${milsec > 9 ? milsec : "0" + milsec}`
-    roundElement.append(resultRound)
-    interval = setInterval(startStopwatch, 10);
+  count++;
+  const resultRound = document.createElement("div");
+  resultRound.innerText = `Round ${count > 9 ? count : "0" + count}: ${hour > 9 ? hour : "0" + hour}:${
+    min > 9 ? min : "0" + min}:${sec > 9 ? sec : "0" + sec}:${milsec > 9 ? milsec : "0" + milsec}`;
+  roundElement.append(resultRound);
+  interval = setInterval(startStopwatch, 10);
 };
 
 const disableBtn = () => {
-    if (disabled) {
-        roundButton.disabled = true
-    }
-}
-disableBtn()
-
+  if (disabled) {
+    roundButton.disabled = true;
+  }
+};
+disableBtn();
 
 // функционал секундомера
 const startStopwatch = () => {
@@ -114,5 +113,5 @@ const startStopwatch = () => {
     minElement.innerText = "0" + min;
   }
 
-  roundButton.disabled = false
+  roundButton.disabled = false;
 };
