@@ -75,8 +75,10 @@ body {
     margin: auto;
     justify-content: center;
     padding: 5px;
-    @media (max-width: 500px) {
-        display: block;
+    @media (width: 500px) {
+        .stopwatch__block {
+            display: flexbox;
+        }
     }
     .time {
       background-color: $bgColor3;
@@ -87,7 +89,7 @@ body {
       justify-content: center;
       align-items: center;
       height: 100px;
-      font-size: 20px;
+      font-size: 25px;
     }
     .label {
       background-color: $bgColor3;

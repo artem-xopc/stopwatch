@@ -115,3 +115,7 @@ const startStopwatch = () => {
 
   roundButton.disabled = false;
 };
+
+
+
+// Здесь реализуется функционал таймера

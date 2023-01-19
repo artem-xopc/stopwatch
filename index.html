@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Styles/main.css" />
     <title>Stopwatch</title>
-  </head>
-  <body>
+</head>
+
+<body>
+    <div class="header">
+        <span class="stop_link"><a href="./index.html">Stopwatch</a></span>
+        <span class="timer_link"><a href="./timer.html">Timer</a></span>
+    </div>
     <div class="stopwatch-wrapper">
-      <div class="stopwatch">
-        <div class="stopwatch__block">
-            <div class="label">Hours</div>
-          <div class="time hour">00</div>
+        <div class="stopwatch">
+            <div class="stopwatch__block">
+                <div class="label">Hours</div>
+                <div class="time hour">00</div>
+            </div>
+
+            <div class="stopwatch__block">
+                <div class="label">Minutes</div>
+                <div class="time min">00</div>
+            </div>
+
+            <div class="stopwatch__block">
+                <div class="label">Seconds</div>
+                <div class="time sec">00</div>
+            </div>
+
+            <div class="stopwatch__block">
+                <div class="label">Milleseconds</div>
+                <div class="time milSec">00</div>
+            </div>
         </div>
 
-        <div class="stopwatch__block">
-            <div class="label">Minutes</div>
-          <div class="time min">00</div>
+        <div class="buttons">
+            <button class="btn start">Start</button>
+            <button class="btn pause">Pause</button>
+            <button class="btn stop">Stop</button>
+            <button class="btn new">Round</button>
         </div>
 
-        <div class="stopwatch__block">
-            <div class="label">Seconds</div>
-          <div class="time sec">00</div>
+        <div class="round__wrapper">
+            <div class="round__label">Rounds</div>
+            <div class="round__input"></div>
         </div>
-
-        <div class="stopwatch__block">
-            <div class="label">Milleseconds</div>
-          <div class="time milSec">00</div>
-        </div>
-      </div>
-
-      <div class="buttons">
-        <button class="btn start">Start</button>
-        <button class="btn pause">Pause</button>
-        <button class="btn stop">Stop</button>
-        <button class="btn new">Round</button>
-      </div>
-
-      <div class="round__wrapper">
-        <div class="round__label">Rounds</div>
-        <div class="round__input"></div>
-      </div>
     </div>
 
     <script src="./JavaScript/main.js"></script>
-  </body>
+</body>
+
 </html>
