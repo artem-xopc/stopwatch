@@ -80,4 +80,26 @@ body {
 .buttons .btn.pause:hover {
   background-color: #f8ab06;
   color: white;
+}
+.buttons .btn.new:disabled {
+  background: none;
+  cursor: not-allowed;
+  color: #fb0404;
+}
+.buttons .btn.new:enabled:hover {
+  background-color: rgb(21, 43, 80);
+  color: white;
+}
+
+.round__wrapper {
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  width: 250px;
+  border: 1px solid #f8ab06;
+  border-bottom: none;
+  color: #abb2bf;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
