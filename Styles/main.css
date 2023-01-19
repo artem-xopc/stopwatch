@@ -1,0 +1,17 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timer-wrapper {
+  width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.buttons {
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

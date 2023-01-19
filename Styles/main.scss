@@ -1,0 +1,24 @@
+$bgColor: rgb(32, 36, 43);
+$textColor: rgb(171 178 191);
+
+body {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-areas: "time time";
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timer-wrapper {
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+    // grid-area: time;
+}
+
+.buttons {
+    cursor: pointer;
+}
