@@ -64,6 +64,8 @@ body {
     margin: 0 auto;
     margin-top: 150px;
     .btn {
+        font-family: 'Courier New', Courier, monospace;
+        color: $textColor;
         background: $bgColor1;
         border: none;
         border-radius: 10px;

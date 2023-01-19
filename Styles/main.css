@@ -59,6 +59,8 @@ body {
   margin-top: 150px;
 }
 .buttons .btn {
+  font-family: "Courier New", Courier, monospace;
+  color: #abb2bf;
   background: rgb(47, 51, 58);
   border: none;
   border-radius: 10px;
