@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/main.css" />
     <title>Stopwatch</title>
-</head>
-<body>
-    <div class="timer-wrapper">
-        <div class="timer">
-            <div class="timer__block">
-                <div class="time hour">00</div>
-                <div class="label"></div>
-            </div>
-            
-            <div class="timer__block">
-                <div class="time min">00</div>
-                <div class="label"></div>
-            </div>
-            
-            <div class="timer__block">
-                <div class="time sec">00</div>
-                <div class="label"></div>
-            </div>
-            
-            <div class="timer__block">
-                <div class="time milSec">00</div>
-                <div class="label"></div>
-            </div>
-
-            <div class="buttons">
-                <div class="start">Start</div>
-                <div class="pause">Pause</div>
-                <div class="stop">Stop</div>
-                <div class="new">New</div>
-            </div>
+  </head>
+  <body>
+    <div class="stopwatch-wrapper">
+        
+      <div class="stopwatch">
+        <div class="stopwatch__block">
+          <div class="time hour">00</div>
+          <div class="label">Hours</div>
         </div>
+
+        <div class="stopwatch__block">
+          <div class="time min">00</div>
+          <div class="label">Minutes</div>
+        </div>
+
+        <div class="stopwatch__block">
+          <div class="time sec">00</div>
+          <div class="label">Seconds</div>
+        </div>
+
+        <div class="stopwatch__block">
+          <div class="time milSec">00</div>
+          <div class="label">Milleseconds</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div class="btn start">Start</div>
+        <div class="btn pause">Pause</div>
+        <div class="btn stop">Stop</div>
+        <div class="btn new">New</div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

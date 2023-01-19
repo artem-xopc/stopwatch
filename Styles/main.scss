@@ -1,24 +1,93 @@
 $bgColor: rgb(32, 36, 43);
-$textColor: rgb(171 178 191);
+$bgColor1: rgb(47, 51, 58);
+$bgColor2: rgb(21, 43, 80);
+$borderColor: rgb(57, 59, 62);
+$textColor: #abb2bf;
+$activeTextColor: #ff9501;
+$tech: #f8ab06;
+$err: #fb0404;
 
 body {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-areas: "time time";
     font-family: 'Courier New', Courier, monospace;
+    color: $textColor;
+    background-color: $bgColor;
     margin: 0;
-    padding: 0;
+    padding: auto;
     box-sizing: border-box;
 }
 
-.timer-wrapper {
-    width: 1024px;
+.stopwatch-wrapper {
+    max-width: 1024px;
     height: 100%;
-    margin: 0 auto;
+    margin: auto;
     margin-top: 150px;
-    // grid-area: time;
+    user-select: none;
+}
+
+.stopwatch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__block {
+        width: 150px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        .time {
+            background-color: $bgColor;
+            border: 1px solid $borderColor;
+            border-bottom: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            font-size: 50px;
+        } 
+        .label {
+            background-color: $bgColor2;
+            border: 1px solid $borderColor;
+            border-top: none;
+            padding: 5px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            text-align: center;
+        }
+    }
 }
 
 .buttons {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-width: 800px;
+    margin: 0 auto;
+    margin-top: 150px;
+    .btn {
+        background: $bgColor1;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 10px;  
+        width: 180px;
+        transition: .3s ease-in-out;
+        &.start {
+            &:hover {
+                background-color: $bgColor2;
+                color: white;
+            }
+        }
+        &.stop {
+            &:hover {
+                background-color: $err;
+                color: white;
+            }
+        }
+        &.pause {
+            &:hover {
+                background-color: $tech;
+                color: white;
+            }
+        }
+    }
 }
