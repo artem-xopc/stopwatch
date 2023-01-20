@@ -11,9 +11,42 @@
 
 <body>
     <div class="header">
+        <span><img src="./logo.png" class="header__logo" /></span>
         <span class="stop_link"><a href="./index.html">Stopwatch</a></span>
         <span class="timer_link"><a href="./timer.html">Timer</a></span>
     </div>
+
+    <div class="stopwatch-wrapper">
+        <div class="stopwatch">
+            <div class="stopwatch__block">
+                <div class="label">Hours</div>
+                <div class="time">00</div>
+            </div>
+            
+            <div class="stopwatch__block">
+                <div class="label">Minutes</div>
+                <div class="time">00</div>
+            </div>
+            
+            <div class="stopwatch__block">
+                <div class="label">Seconds</div>
+                <div class="time">00</div>
+            </div>
+            
+            <div class="stopwatch__block">
+                <div class="label">Milleseconds</div>
+                <div class="time">00</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn start">Start</button>
+            <button class="btn pause">Pause</button>
+            <button class="btn stop">Stop</button>
+            <button class="btn select">Select start</button>
+        </div>
+    </div>
+
+    <script src="./JavaScript/timer.js"></script>
 </body>
 
 </html>
