@@ -22,8 +22,8 @@ body {
 }
 .header__logo {
   margin-left: 25px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 a {
@@ -103,6 +103,25 @@ a:hover {
   font-size: 12px;
 }
 
+.input__text {
+  display: flex;
+  position: relative;
+  left: 240px;
+  justify-items: center;
+  align-items: center;
+  border: none;
+  background-color: #20242b;
+  color: #abb2bf;
+}
+.input__text:disabled {
+  background: none;
+  cursor: not-allowed;
+  color: #fb0404;
+}
+.input__text:enabled:hover {
+  color: white;
+}
+
 .buttons {
   cursor: pointer;
   display: flex;
@@ -155,4 +174,18 @@ a:hover {
 .buttons .btn.select:hover {
   background-color: rgb(21, 43, 80);
   color: white;
+}
+
+.timeNow {
+  text-align: center;
+  margin: 100px auto;
+  font-size: 18px;
+}
+.timeNow:hover {
+  transition: 0.3s ease-in-out;
+  color: #36f008;
+}
+.timeNow:active {
+  color: #ff9501;
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */

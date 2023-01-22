@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/main.css" />
-    <title>Document</title>
+    <title>Timer</title>
 </head>
 
 <body>
@@ -17,26 +17,31 @@
     </div>
 
     <div class="stopwatch-wrapper">
+
+        <div class="timeNow">00:00:00</div> 
+
         <div class="stopwatch">
+
+
             <div class="stopwatch__block">
                 <div class="label">Hours</div>
-                <div class="time">00</div>
+                <div class="time hour">00</div>
             </div>
-            
+
             <div class="stopwatch__block">
                 <div class="label">Minutes</div>
-                <div class="time">00</div>
+                <div class="time min">00</div>
             </div>
-            
+
             <div class="stopwatch__block">
                 <div class="label">Seconds</div>
-                <div class="time">00</div>
+                <div class="time sec">00</div>
             </div>
-            
-            <div class="stopwatch__block">
+
+            <!-- <div class="stopwatch__block">
                 <div class="label">Milleseconds</div>
-                <div class="time">00</div>
-            </div>
+                <div class="time milSec">00</div>
+            </div> -->
         </div>
         <div class="buttons">
             <button class="btn start">Start</button>
@@ -44,6 +49,7 @@
             <button class="btn stop">Stop</button>
             <button class="btn select">Select start</button>
         </div>
+        <input class="input__text" placeholder="00:00:00" />
     </div>
 
     <script src="./JavaScript/timer.js"></script>

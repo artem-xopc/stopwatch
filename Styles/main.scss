@@ -10,6 +10,7 @@ $textColor: #abb2bf;
 $activeTextColor: #ff9501;
 $tech: #f8ab06;
 $err: #fb0404;
+$disable: #36f008;
 
 // Переменные отступов
 $padding: padding 10px;
@@ -39,8 +40,8 @@ body {
   margin: 0 auto;
   &__logo {
     margin-left: 25px;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -52,7 +53,7 @@ a {
 }
 
 a:hover {
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-color: #f8ab06;
   color: white;
 }
@@ -91,9 +92,9 @@ a:hover {
     justify-content: center;
     padding: 5px;
     @media (width: 500px) {
-        .stopwatch__block {
-            display: flexbox;
-        }
+      .stopwatch__block {
+        display: flexbox;
+      }
     }
     .time {
       background-color: $bgColor3;
@@ -114,6 +115,27 @@ a:hover {
       border-top-right-radius: 10px;
       text-align: center;
       font-size: 12px;
+    }
+  }
+}
+
+.input__text {
+  display: flex;
+  position: relative;
+  left: 240px;
+  justify-items: center;
+  align-items: center;
+  border: none;
+  background-color: $bgColor;
+  color: $textColor;
+  &:disabled {
+    background: none;
+    cursor: not-allowed;
+    color: $err;
+  }
+  &:enabled {
+    &:hover {
+      color: white;
     }
   }
 }
@@ -142,14 +164,14 @@ a:hover {
       }
     }
     &.stop {
-        color: $err;
+      color: $err;
       &:hover {
         background-color: $err;
         color: white;
       }
     }
     &.pause {
-        color: $tech;
+      color: $tech;
       &:hover {
         background-color: $tech;
         color: white;
@@ -163,9 +185,9 @@ a:hover {
       }
       &:enabled {
         &:hover {
-            background-color: $bgColor2;
-            color: white;
-          }
+          background-color: $bgColor2;
+          color: white;
+        }
       }
     }
     &.select {
@@ -179,4 +201,20 @@ a:hover {
 
 // Timer
 
+.timeNow {
+  text-align: center;
+  margin: 100px auto;
+  font-size: 18px;
+  &:hover {
+    transition: 0.3s ease-in-out;
+    color: $disable;
+  }
+  &:active {
+    color: $activeTextColor;
+    font-size: 20px;
+  }
+}
 
+// .select_num {
+//   margin-top: 100px;
+// }

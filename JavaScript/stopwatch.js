@@ -15,7 +15,7 @@ const roundButton = document.querySelector(".new");
 // Объявляем основные переменные
 let milsec = 0,
   sec = 0,
-  min = 0,
+  min = 2,
   hour = 0,
   interval,
   count = 0,
