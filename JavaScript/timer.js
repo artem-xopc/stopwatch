@@ -27,14 +27,37 @@ const time = () => {
 // задаём слушатели
 startButton.addEventListener("click", () => {
   clearInterval(interval);
-  // interval = setInterval(startTimer, 10);
+  interval = setInterval(startTimer, 10);
+});
+
+pauseButton.addEventListener("click", () => {
+  clearInterval(interval);
+});
+
+stopButton.addEventListener("click", () => {
+  clearInterval(interval);
+  funcstopButton();
 });
 
 selectButton.addEventListener("click", () => {
-  
+  clearInterval(interval)
   disableSelect();
 })
 
+// функционал кнопок
+const funcstopButton = () => {
+  milsec = 0;
+  sec = 0;
+  min = 0;
+  hour = 0;
+  milsecElement.textContent = "00";
+  secElement.textContent = "00";
+  minElement.textContent = "00";
+  hourElement.textContent = "00";
+  disableBtn();
+};
+
+// Функция для активации/деактивации поля ввода значения таймера
 const disableSelect = () => {
   if (disabled) {
     roundButton.disabled = true;
@@ -49,7 +72,9 @@ let minSelect = 60;
 let secondSelect = 0;
 
 
-const timer = () => {
+const activetimer = () => {
+  if (active) {}
+
   let minutes = Math.floor(timeHard / 60);
   let hour = Math.floor(minutes / 60);
   if (minutes >= 60) {

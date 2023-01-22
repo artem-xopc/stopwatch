@@ -71,18 +71,14 @@ a:hover {
   display: flex;
   margin-top: 100px;
 }
-.stopwatch__block {
+.stopwatch {
+  display: flexbox;
   width: 120px;
   margin: auto;
   justify-content: center;
   padding: 5px;
 }
-@media (width: 500px) {
-  .stopwatch__block .stopwatch__block {
-    display: flexbox;
-  }
-}
-.stopwatch__block .time {
+.stopwatch .time {
   background-color: #000;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -92,8 +88,9 @@ a:hover {
   height: 100px;
   font-size: 25px;
 }
-.stopwatch__block .label {
+.stopwatch .label {
   background-color: #000;
+  height: 10px;
   border-bottom: none;
   color: #f8ab06;
   padding: 5px;
@@ -119,6 +116,7 @@ a:hover {
   color: #fb0404;
 }
 .input__text:enabled:hover {
+  transition: 0.3s ease-in-out;
   color: white;
 }
 

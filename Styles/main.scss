@@ -86,16 +86,13 @@ a:hover {
 .stopwatch {
   display: flex;
   margin-top: 100px;
-  &__block {
+  & {
+    
+  display: flexbox;
     width: 120px;
     margin: auto;
     justify-content: center;
     padding: 5px;
-    @media (width: 500px) {
-      .stopwatch__block {
-        display: flexbox;
-      }
-    }
     .time {
       background-color: $bgColor3;
       border-bottom-left-radius: 20px;
@@ -108,6 +105,7 @@ a:hover {
     }
     .label {
       background-color: $bgColor3;
+      height: 10px;
       border-bottom: none;
       color: $tech;
       padding: 5px;
@@ -135,6 +133,7 @@ a:hover {
   }
   &:enabled {
     &:hover {
+      transition: .3s ease-in-out;
       color: white;
     }
   }
